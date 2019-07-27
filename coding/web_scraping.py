@@ -23,6 +23,8 @@ for link in soup.findAll('link', {'rel': 'alternate'}):
     if link.has_attr('href'):
         links.append(link['href'])
 
+link_pinterest = filter(lambda k: 'https://www.pinterest.com/' in k, links)
+
 # -----------------------------------------------------------------------------------------
 # Write content to a Text file
 
@@ -30,7 +32,7 @@ for link in soup.findAll('link', {'rel': 'alternate'}):
 f = open('work-7.txt', 'w+')
 
 # write the content
-for l in links:
+for l in link_pinterest:
     f.write(f'{l} \n')      # along a column
 
 # Don't forget to close the opened file
