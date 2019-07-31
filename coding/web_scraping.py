@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 import urllib3
-import re
 
 # Enter Website's URL
 URL = 'https://www.pinterest.com/pin/325033298107933621/'
